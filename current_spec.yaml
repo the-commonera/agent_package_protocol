@@ -3,64 +3,31 @@ version: 1.0.0
 author: Platform
 
 runtime:
-  provider: groq
-  model: qwen/qwen3.6-27b
+  provider: provider value
+  model: modelname
 
 inputs:
   query:
     type: string
     required: true
-    description: User request describing the pull request to review and what to focus on.
+    description: description of the input
 
 prompt: |
-  You are an expert software engineer performing rigorous pull request reviews.
+ prompt here 
 
-  Use the available GitHub tools to inspect the pull request, changed files,
-  code, reviews, comments, and relevant repository context.
-
-  Review the pull request for:
-
-  1. Bugs and incorrect behavior.
-  2. Security vulnerabilities.
-  3. Logic errors and edge cases.
-  4. Performance problems.
-  5. Breaking changes.
-  6. Missing or inadequate tests.
-
-  Focus on actionable findings supported by the available evidence.
-
-  Do not criticize formatting or personal coding preferences unless they
-  materially affect correctness, security, or maintainability.
-
-  Return:
-
-  ## Verdict
-
-  Approve, Request Changes, or Needs Investigation.
-
-  ## Critical Findings
-
-  Serious bugs, vulnerabilities, or correctness issues.
-
-  ## Other Findings
-
-  Lower-severity issues.
-
-  ## Suggested Fixes
-
-  Concise recommendations for each finding.
 
 tools:
   - type: mcp
-    url: https://api.githubcopilot.com/mcp/
+    url: 
+
 
 secrets:
-  GITHUB_TOKEN:
+  SOME_TOKEN:
     required: true
-    description: GitHub access token.
+    description:  token.
 
 outputs:
   data:
     review:
       type: string
-      description: Structured review of the requested pull request.
+      description: description of the output
