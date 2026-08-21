@@ -1,0 +1,57 @@
+name: pr_reviewer
+version: 1.0.0
+author: Platform
+
+runtime:
+  provider: provider value
+  model: modelname
+  temperature: temp
+  top_p: top p value
+  
+
+inputs:
+  query:
+    type: string
+    required: true
+    description: description of the input
+
+prompt: |
+ prompt here 
+
+constraints : |
+
+  constraints here
+
+skills :
+
+/////////////////////////////////// DEFINED BY THE AUTHOR 
+  premortem : |
+
+  steelman: |
+
+  assumptions: |
+
+  secondorder: |
+
+  redteam : |
+
+ /////////////////////////////////////// 
+tools:
+  - type: mcp
+    url: 
+
+
+resources:
+    - type: 
+      url : 
+
+secrets:
+  SOME_TOKEN:
+    required: true
+    description:  token.
+
+outputs:
+  data:
+    review:
+      type: string
+      description: description of the output
