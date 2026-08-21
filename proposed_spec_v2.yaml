@@ -16,7 +16,8 @@ inputs:
     description: description of the input
 
 prompt: |
- prompt here 
+    - type :
+      url:
 
 constraints : |
 
@@ -24,17 +25,11 @@ constraints : |
 
 skills :
 
-/////////////////////////////////// DEFINED BY THE AUTHOR 
-  premortem : |
+/////////////////////////////////// DEFINED BY THE AUTHOR EXAMPLE
 
-  steelman: |
-
-  assumptions: |
-
-  secondorder: |
-
-  redteam : |
-
+  redteam : 
+   - type :
+      url:
  /////////////////////////////////////// 
 tools:
   - type: mcp
